@@ -1,0 +1,43 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "predeploy": "npm run generate",
+    "deploy": "gh-pages -d dist",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/image": "^1.7.0",
+    "@nuxtjs/fontaine": "^0.4.3",
+    "@nuxtjs/google-fonts": "^3.2.0",
+    "@nuxtjs/i18n": "^8.3.1",
+    "@nuxtjs/robots": "^3.0.0",
+    "@nuxtjs/sitemap": "^5.2.1",
+    "@pinia/nuxt": "^0.5.1",
+    "axios": "^1.7.2",
+    "leaflet": "^1.9.4",
+    "normalize.css": "^8.0.1",
+    "nuxt": "^3.11.2",
+    "nuxt-booster": "^3.0.16",
+    "nuxt-swiper": "^1.2.2",
+    "pinia": "^2.1.7",
+    "sass": "^1.77.4",
+    "sass-loader": "^14.2.1",
+    "swiper": "^11.1.4",
+    "uuid": "^9.0.1",
+    "vue": "^3.4.27",
+    "vue-i18n": "^9.13.1",
+    "vue-leaflet": "^0.1.0",
+    "vue-router": "^4.3.2",
+    "vue-the-mask": "^0.11.1",
+    "vuejs-paginate-next": "^1.0.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  }
+}

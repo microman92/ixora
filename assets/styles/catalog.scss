@@ -1,0 +1,225 @@
+.header-second {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    height: 500px;
+
+    @include media(575) {
+        height: 350px;
+    }
+
+    &__bg {
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: -1;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: 0.5;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+.header-second__img {
+    width: 100%;
+}
+
+.second {
+    &__title {
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 80px;
+        text-transform: uppercase;
+        background: linear-gradient(90deg, #9d8567 0%, #dcc5a9 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        @include media(1440) {
+            font-size: 64px;
+        }
+
+        @include media(768) {
+            font-size: 48px;
+        }
+
+        @include media(576) {
+            font-size: 40px;
+        }
+    }
+
+    &__subtitle {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 32px;
+        text-transform: uppercase;
+        background: linear-gradient(90deg, #9d8567 0%, #dcc5a9 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        @include media(575) {
+            font-size: 32px;
+        }
+
+    }
+}
+
+.catalog {
+    &__inner {
+        max-width: 1400px;
+        margin: 77px auto 0;
+        padding: 0 20px;
+        width: 100%;
+
+        @include media(575) {
+            padding: 0 0px;
+        }
+    }
+
+    &__btn {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        & span {
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 110%;
+            color: #d2a873;
+        }
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 470px);
+        gap: 16px;
+
+        @include media(1600) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include media(1200) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include media(768) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+
+        &_top {
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 8px 8px 0 0;
+            }
+        }
+
+        &_bottom {
+            padding: 11px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 0 0 8px 8px;
+            background: #262626;
+
+
+            @include media(575) {
+                padding: 16px 13px;
+            }
+
+            &-right {
+                font-family: var(--font-family);
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 123%;
+                color: #ffb95f;
+            }
+        }
+    }
+
+}
+
+.card__bottom_left-info {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 122%;
+    color: #d2a873;
+
+    & span {
+        color: #808080;
+    }
+}
+
+.card__bottom_left-desc {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 122%;
+    color: #808080;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+    margin: 80px 0;
+
+    @include media(768) {
+        gap: 15px;
+    }
+
+    @include media(575) {
+        gap: 5px;
+    }
+}
+
+.page-item {
+    border: 1.95px solid #262626;
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--white);
+}
+
+.page-link {
+    padding: 12px 20px;
+    display: block;
+    cursor: pointer;
+
+
+    @include media(575) {
+        padding: 8px 16px;
+    }
+}
+
+.page-item.active,
+.page-item.prev,
+.page-item.next {
+    color: #ffb95f;
+}

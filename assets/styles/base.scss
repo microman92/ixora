@@ -1,0 +1,75 @@
+@mixin media($size) {
+    @media (max-width: #{$size}px) {
+        @content;
+    }
+}
+
+:root {
+    --font-family: "Manrope";
+    --second-family: "Satoshi";
+    --third-family: "Open Sans";
+    --black: #000;
+    --white: #fff;
+    --swiper-navigation-sides-offset: 10px;
+    @include media(992) {
+    --swiper-navigation-sides-offset: 30px;
+}
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #1f1f1f inset !important;
+    /* Задаем ваш цвет фона */
+    -webkit-text-fill-color: #fff !important;
+    /* Цвет текста при автозаполнении */
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Для других браузеров, например Firefox */
+input:-moz-autofill {
+    box-shadow: 0 0 0 30px #1f1f1f inset !important;
+    /* Задаем ваш цвет фона */
+    -moz-text-fill-color: #fff !important;
+    /* Цвет текста при автозаполнении */
+}
+
+button,
+input {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+html {
+    background: #131313;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}

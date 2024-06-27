@@ -1,0 +1,479 @@
+.main-hotels {
+    padding: 0 50px;
+
+    @include media(992) {
+        padding: 0 20px;
+    }
+
+    @include media(576) {
+        padding: 0 0px;
+    }
+
+}
+
+.hotels__images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 130px auto 0;
+    gap: 20px;
+    grid-auto-rows: 274px;
+
+    @include media (1440) {
+        grid-auto-rows: 190px;
+
+    }
+
+    @include media (1200) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media (768) {
+        margin: 40px auto 0;
+    }
+
+    @include media (576) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+
+.hotels__img {
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+        pointer-events: none;
+
+    }
+
+    &:nth-child(1) {
+        grid-column: span 2;
+        grid-row: span 2;
+
+        @include media(576) {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+    }
+
+    &:last-child {
+        position: relative;
+        z-index: 0;
+
+
+        &::after {
+            content: 'Смотреть еще фото';
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.7);
+            font-family: var(--font-family);
+            font-weight: 600;
+            font-size: 28px;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+            border-radius: 20px;
+
+            @include media(768) {
+                font-size: 20px;
+            }
+        }
+    }
+
+}
+
+
+.hotels__info {
+    display: flex;
+    gap: 90px;
+    align-items: center;
+    justify-content: center;
+    margin: 100px 0;
+
+    @include media(1440) {
+        gap: 20px;
+    }
+
+    @include media(1200) {
+        flex-direction: column;
+    }
+}
+
+.hotels__desc {
+    max-width: 950px;
+    width: 100%;
+
+    @include media(576) {
+        padding: 0 20px;
+    }
+
+    &_title {
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 42px;
+        line-height: 130%;
+        text-transform: uppercase;
+        color: var(--white);
+
+        @include media(1440) {
+            font-size: 32px;
+        }
+
+        @include media(1440) {
+            font-size: 22px;
+        }
+    }
+
+    &_breadcrambs {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 85%;
+        color: #d2a873;
+        margin: 30px 0;
+
+        @include media(1440) {
+            font-size: 16px;
+        }
+
+        @include media(576) {
+            font-size: 14px;
+            margin: 20px 0;
+        }
+    }
+
+    &_text {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 125%;
+        letter-spacing: 0.03em;
+        color: var(--white);
+
+        @include media(1440) {
+            font-size: 20px;
+        }
+
+        @include media(576) {
+            font-size: 16px;
+            line-height: 135%;
+        }
+    }
+
+}
+
+.hotels__details {
+    padding: 40px;
+    border-radius: 20px;
+    background: #1f1f1f;
+    max-width: 820px;
+    width: 100%;
+
+    @include media(768) {
+        padding: 20px;
+    }
+
+    &_title {
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 28px;
+        color: var(--white);
+        margin-bottom: 30px;
+
+        @include media(1440) {
+            font-size: 24px;
+            margin-bottom: 24px;
+        }
+    }
+
+    &_items {
+        display: grid;
+        grid-template-columns: 339px 383px;
+        gap: 15px;
+
+        @include media(1440) {
+            grid-template-columns: 250px 320px;
+        }
+
+        @include media(1200) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include media(768) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        @include media(768) {
+            grid-template-columns: repeat(1, 340px);
+        }
+    }
+
+    &_left {
+        max-width: 340px;
+        width: 100%;
+
+        @include media(768) {
+            max-width: initial;
+        }
+    }
+
+    &_right {
+        max-width: 383px;
+        width: 100%;
+        display: flex;
+        gap: 42px;
+
+        @include media(1440) {
+            gap: 24px;
+        }
+
+        @include media(768) {
+            max-width: initial;
+            gap: 120px;
+        }
+
+        @include media(576) {
+            gap: 15px;
+        }
+    }
+
+    &-info {
+        border-radius: 10px;
+        background: #171717;
+        padding: 16px 20px;
+
+        @include media(1440) {
+            height: 70px;
+        }
+
+        & p {
+            font-family: var(--font-family);
+            font-weight: 600;
+            font-size: 18px;
+            color: #b1b1b1;
+
+            @include media(1440) {
+                font-size: 16px;
+            }
+
+            @include media(992) {
+                font-size: 14px;
+            }
+        }
+
+        & span {
+            font-family: var(--font-family);
+            font-weight: 600;
+            font-size: 24px;
+            color: var(--white);
+
+            @include media(1440) {
+                font-size: 20px;
+            }
+
+            @include media(992) {
+                font-size: 16px;
+            }
+        }
+
+        &__left {
+            max-width: 140px;
+            width: 100%;
+
+            @include media(1440) {
+                max-width: 125px;
+            }
+        }
+
+        &__right {
+            position: relative;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 60px;
+                height: 2px;
+                background: #2f2f2f;
+                transform: rotate(-90deg);
+                position: absolute;
+                left: -50px;
+                top: 25px;
+
+                @include media(1440) {
+                    left: -43px;
+                }
+
+                @include media(576) {
+                    top: 15px;
+                }
+            }
+        }
+    }
+
+    &_icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+
+        @include media(1440) {
+            gap: 18px;
+        }
+    }
+
+    &_icon {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        & span {
+            font-family: var(--font-family);
+            font-weight: 600;
+            font-size: 24px;
+            color: var(--white);
+        }
+    }
+
+    &_btns {
+        display: flex;
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    &_pdf,
+    &_price,
+    &_icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    &_pdf {
+        width: 339px;
+        height: 90px;
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 123%;
+        color: #ffb95f;
+
+        @include media(1440) {
+            width: 250px;
+            font-size: 24px;
+            height: 70px;
+        }
+
+        @include media(1200) {
+            width: 310px;
+            font-size: 24px;
+            height: 70px;
+        }
+
+        @include media(992) {
+            font-size: 20px;
+        }
+
+        @include media(768) {
+            width: initial;
+        }
+
+        @include media(576) {
+            padding: 10px;
+            width: initial;
+            font-size: 14px;
+        }
+    }
+
+    &_price {
+        width: 225px;
+        height: 90px;
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 123%;
+        color: #ffb95f;
+
+        @include media(1440) {
+            max-width: 174px;
+            font-size: 24px;
+            height: 70px;
+        }
+
+        @include media(1200) {
+            max-width: 250px;
+        }
+
+        @include media(992) {
+            font-size: 20px;
+        }
+
+        @include media(768) {
+            max-width: 185px;
+            width: 100%;
+        }
+
+        @include media(576) {
+            max-width: 110px;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+    }
+
+    &_phone {
+
+        @include media(1440) {
+            max-width: 133px;
+            height: 70px;
+        }
+
+
+
+        &.hotels__details_icon {
+            @include media(1200) {
+                max-width: 180px;
+                width: 100%;
+            }
+
+            @include media(576) {
+                padding: 10px;
+                max-width: 75px;
+            }
+        }
+
+
+        & img {
+
+            @include media(1440) {
+                width: 32px;
+                heigth: 32px
+            }
+
+            @include media(576) {
+                width: 25px;
+            }
+        }
+    }
+
+    &_icon {
+        width: 143px;
+    }
+}
+
+.map-container {
+    height: 789px;
+    width: 100%;
+    margin: 100px 0;
+
+    @include media(1200) {
+        height: 500px;
+    }
+}
